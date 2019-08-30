@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: dubbo-provider
+  main:
+    allow-bean-definition-overriding: true
+dubbo:
+  scan:
+    base-packages: work.idler.apache.dubbo.provider.service
+  protocol:
+    name: dubbo
+    port: 20881
+    # port: 20880
+    serialization: kryo
+  registry:
+    address: nacos://192.168.159.132:8848
+  provider:
+    loadbalance: roundrobin
